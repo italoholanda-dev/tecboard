@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Unbounded";
+    src: url("../fonts/Unbounded-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0E1014;
+    color: #FFFFFF;
+}
+
+.logo {
+    display: block;
+    margin: 75px 0 0 360px;
+}
+
+h1 {
+    font-size: 64px;
+    font-family: "Unbounded", sans-serif;
+    text-align: center;
+    margin-top: 60px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 24px auto 0;
+    width: 792px;
+}
+
+h1 span {
+    color: #9747FF;
+}
+
+a {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #9747FF;
+    width: 340px;
+    height: 66px;
+    display: block;
+    text-align: center;
+    line-height: 66px;
+    border-radius: 36px;
+    margin: 40px auto;
+}
+a:hover {
+    background-color: #8233E8;
+}
+
+.celular {
+    display: block;
+    width: 792px;
+    height: 446px;
+    margin: 0 auto;
+}
+
+/* --- CSS BASE (Desktop) --- */
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 24px auto 0;
+    /* Mudança aqui: */
+    width: 90%; 
+    max-width: 792px; 
+}
+
+.celular {
+    display: block;
+    margin: 0 auto;
+    /* Mudança aqui: */
+    width: 90%;
+    max-width: 792px;
+    height: auto; /* Deixa a altura proporcional à largura */
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+@media(max-width: 768px){
+    .logo {
+        /* Reduzi um pouco para não colar na borda em telas médias */
+        margin: 65px 0 0 5%; 
+    }
+    p {
+        max-width: 648px; /* O width: 90% já vem do CSS base! */
+    }
+}
+
+@media(max-width: 375px){
+    .logo {
+        margin: 32px 0 0 5%;
+    }
+    h1 {
+        font-size: 40px;
+        /* Adicionei uma margem lateral para o título não colar na borda */
+        width: 90%;
+        margin: 40px auto 0; 
+    }
+    p {
+        font-size: 20px;
+        /* Removi o height fixo de 340px, deixe a altura se ajustar ao texto */
+        height: auto; 
+    }
+    a {
+        font-size: 20px;
+        width: 80%; /* Botão fluido */
+        max-width: 251px;
+    }
+    .celular {
+        /* Não precisa definir width em px de novo, o max-width e width: 90% já cuidam disso! */
+        margin-top: 30px;
+    }
+}
